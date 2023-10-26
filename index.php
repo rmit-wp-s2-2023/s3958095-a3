@@ -25,6 +25,7 @@
                 <th>Credit Points</th>
                 <th>Career</th>
                 <th>Coordinator</th>
+                <th>View Enrolled Students</th>
             </tr>
             <?php foreach ($courses as $course): ?>
             <tr>
@@ -33,8 +34,11 @@
                 <td><?php echo htmlspecialchars($course['creditPoints']); ?></td>
                 <td><?php echo htmlspecialchars($course['career']); ?></td>
                 <td><?php echo htmlspecialchars($course['coordinator']); ?></td>
+                <td><a href="details.php?courseID=<?php echo htmlspecialchars($course['courseID']); ?>">View Enrolled
+                        Students</a></td>
             </tr>
             <?php endforeach; ?>
+
         </table>
     </div>
 
